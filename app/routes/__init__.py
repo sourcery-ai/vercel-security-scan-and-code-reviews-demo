@@ -1,0 +1,3 @@
+"""
+Route blueprints for BlogHub.
+"""

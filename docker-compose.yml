@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - DATABASE_URL=postgresql://bloghub:bloghub123@db:5432/bloghub
+    depends_on:
+      - db
+    volumes:
+      - ./app:/app/app
+      - ./logs:/app/logs
+    command: gunicorn --bind 0.0.0.0:5000 --reload app:create_app()
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=bloghub
+      - POSTGRES_USER=bloghub
+      - POSTGRES_PASSWORD=bloghub123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
