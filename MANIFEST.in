@@ -1,7 +1,0 @@
-include requirements.txt
-include LICENSE
-include README.md
-recursive-include app/templates *
-recursive-include app/static *
-recursive-exclude * __pycache__
-recursive-exclude * *.py[co]
