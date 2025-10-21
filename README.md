@@ -1,3 +1,6 @@
+<img width="807" height="578" alt="Screenshot 2025-10-21 at 10 24 04" src="https://github.com/user-attachments/assets/f90d793d-5043-4530-83f8-f2c2316798ec" />
+
+
 # Sourcery for Vercel
 
 Sourcery is an extra set of eyes on your code to cut down on bugs and security risks and keep your code clean so you can move fast.
